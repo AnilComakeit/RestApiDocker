@@ -18,7 +18,7 @@ node{
     }
     
     stage('Run Docker Compose File'){  
-        sh 'sudo docker-compose up '
+        sh 'sudo docker-compose up -d'
         sh 'echo "DOcker up!!!!"'
     }
     
