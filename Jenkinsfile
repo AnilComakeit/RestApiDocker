@@ -7,9 +7,14 @@ node{
 
         
     }
-    stage('Run Docker Compose File'){
-        sh 'sudo docker-compose up -d'
-        sh 'sudo docker-compose up -d'
+     stage('Maven Build'){
+        sh '  mvn clean'
+        sh '  mvn test'
+        sh '  mvn install'
+    }
+    
+    stage('Run Docker Compose File'){  
+        sh 'sudo docker-compose up  '
     }
     
     stage('Push Image To Docker Hub'){
