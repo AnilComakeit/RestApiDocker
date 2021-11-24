@@ -1,6 +1,6 @@
 node{
     stage('SCM Checkout'){
-        git 'https://github.com/AnilComakeit/RestApiDocker.git'
+        sh 'echo "started"'
     }
     stage('Run Docker Compose File'){
         sh 'sudo docker-compose build'
