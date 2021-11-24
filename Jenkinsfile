@@ -12,9 +12,14 @@ node{
         sh '  mvn test'
         sh '  mvn install'
     }
+    stage('Build App.jar'){  
+        sh 'sudo docker build -t app .'
+        sh 'echo "Build Done!!!!"'
+    }
     
     stage('Run Docker Compose File'){  
-        sh 'sudo docker-compose up  '
+        sh 'sudo docker-compose up '
+        sh 'echo "DOcker up!!!!"'
     }
     
     stage('Push Image To Docker Hub'){
