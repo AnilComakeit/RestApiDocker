@@ -1,9 +1,12 @@
 node{
     stage('SCM Checkout'){
         sh 'echo "started"'
+                git   url: 'https://github.com/AnilComakeit/Docker-website.git'
+
+        
     }
     stage('Run Docker Compose File'){
-        
+        sh 'sudo docker-compose up -d'
         sh 'sudo docker-compose up -d'
     }
     
