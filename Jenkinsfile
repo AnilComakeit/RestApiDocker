@@ -3,7 +3,7 @@ node{
         sh 'echo "started"'
     }
     stage('Run Docker Compose File'){
-        sh 'sudo docker-compose build'
+        
         sh 'sudo docker-compose up -d'
     }
     
