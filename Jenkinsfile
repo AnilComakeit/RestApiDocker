@@ -1,7 +1,7 @@
 node{
     stage('SCM Checkout'){
         sh 'echo "started"'
-        git credentialsId: 'Git_token', url: 'https://github.com/AnilComakeit/Docker-website.git'
+        git credentialsId: 'Git_token', url: 'https://github.com/AnilComakeit/RestApiDocker.git'
 
 
         
